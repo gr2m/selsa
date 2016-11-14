@@ -19,6 +19,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
 after_success:
   - npm run semantic-release
+  - npm run coverage
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
