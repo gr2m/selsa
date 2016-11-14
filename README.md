@@ -3,6 +3,7 @@
 > Selenium, Saucelabs, Webdriver and lots of despair
 
 [![Build Status](https://travis-ci.org/gr2m/selsa.svg?branch=master)](https://travis-ci.org/gr2m/selsa)
+[![Coverage Status](https://coveralls.io/repos/gr2m/selsa/badge.svg?branch=master)](https://coveralls.io/github/gr2m/selsa?branch=master)
 [![Dependency Status](https://david-dm.org/gr2m/selsa.svg)](https://david-dm.org/gr2m/selsa)
 [![devDependency Status](https://david-dm.org/gr2m/selsa/dev-status.svg)](https://david-dm.org/gr2m/selsa#info=devDependencies)
 
