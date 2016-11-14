@@ -11,7 +11,7 @@ test('config', (group) => {
   })
 
   group.test('defaults', (t) => {
-    getConfig({}, (error, config) => {
+    getConfig(undefined, (error, config) => {
       t.error(error)
       t.equal(config.runner, 'selenium')
       t.equal(config.webdriver.desiredCapabilities.browserName, 'chrome')
@@ -35,5 +35,15 @@ test('config', (group) => {
       t.end()
     })
   })
+
+  group.test('invalid runner', (t) => {
+    getConfig({
+      runner: 'invalid'
+    }, (error) => {
+      t.equal(error.message, 'options.runner must be "selenium" or "saucelabs", but it is "invalid"')
+      t.end()
+    })
+  })
+
   group.end()
 })
