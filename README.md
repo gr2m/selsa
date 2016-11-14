@@ -179,7 +179,7 @@ ENV variables, listed below the option name.
     </tr>
     <tr>
       <td>
-        <strong>saucelabs.desiredCapabilities.idle-timeout</strong><br>
+        <strong>saucelabs.webdriver.desiredCapabilities.idle-timeout</strong><br>
         (<code>SAUCELABS_IDLE_TIMEOUT</code>)<br><br>
 
         <a href="https://docs.saucelabs.com/reference/test-configuration/#idle-test-timeout">SauceLabs Idle Test Timeout</a>
@@ -188,7 +188,7 @@ ENV variables, listed below the option name.
     </tr>
     <tr>
       <td>
-        <strong>saucelabs.desiredCapabilities.max-duration</strong><br>
+        <strong>saucelabs.webdriver.desiredCapabilities.max-duration</strong><br>
         (<code>SAUCELABS_MAX_DURATION</code>)<br><br>
 
         <a href="https://docs.saucelabs.com/reference/test-configuration/#maximum-test-duration">SauceLabs Maximum Test Duration</a>
@@ -197,7 +197,7 @@ ENV variables, listed below the option name.
     </tr>
     <tr>
       <td>
-        <strong>saucelabs.desiredCapabilities.max-duration</strong><br>
+        <strong>saucelabs.webdriver.desiredCapabilities.max-duration</strong><br>
         (<code>SAUCELABS_COMMAND_TIMEOUT</code>)<br><br>
 
         <a href="https://docs.saucelabs.com/reference/test-configuration/#command-timeout">SauceLabs Command Timeout</a>
