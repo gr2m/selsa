@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coverage:local-report": "nyc report --reporter=lcov && echo 'open coverage/lcov-report/index.html'",
     "test": "nyc tap --no-cov 'test/{unit,integration}/*-test.js'",
     "posttest": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
