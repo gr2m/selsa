@@ -3,7 +3,8 @@
   "description": "Selenium, Saucelabs, Webdriver and lots of despair",
   "main": "index.js",
   "scripts": {
-    "test": "tap 'test/{unit,integration}/*-test.js'",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc tap --no-cov 'test/{unit,integration}/*-test.js'",
     "posttest": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -31,11 +32,23 @@
     "webdriverio": "^4.4.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.15",
     "hapi": "^15.2.0",
     "hapi-auth-cookie": "^6.1.1",
     "joi": "^9.2.0",
+    "lolex": "^1.5.2",
+    "nyc": "^8.4.0",
+    "proxyquire": "^1.7.10",
     "semantic-release": "^6.3.1",
+    "simple-mock": "^0.7.2",
     "standard": "^8.5.0",
     "tap": "^8.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "test",
+      "server"
+    ]
   }
 }
