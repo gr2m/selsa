@@ -2,13 +2,13 @@ module.exports = selsa
 
 const async = require('async')
 const debug = require('debug')
-const webdriverio = require('webdriverio')
 
 const getConfig = require('./lib/config/get')
 const sauceConnectLauncher = require('./lib/saucelabs/connect')
 const seleniumCheck = require('./lib/selenium/check')
 const seleniumInstall = require('./lib/selenium/install')
 const seleniumStart = require('./lib/selenium/start')
+const initBrowser = require('./lib/webdriver/init-browser')
 const tearDown = require('./lib/tear-down')
 
 function selsa (options, callback) {
@@ -42,61 +42,20 @@ function selsa (options, callback) {
       ])
     }
 
+    tasks = tasks.concat([initBrowser.bind(null, state)])
+
     async.waterfall(tasks, (error) => {
       if (error) {
-        return callback(error)
+        return tearDown(state, () => {
+          callback(error)
+        })
       }
 
-      state.browser = webdriverio.remote(config.webdriver)
-
-      state.browser.on('command', function (command) {
-        state.debugBrowser('%s %s', command.method, command.uri.path)
-
-        if (command.data.script) {
-          command.data.script = getScriptName(command.data.script)
-        }
-        state.debugBrowser(command.data)
+      callback(null, {
+        selenium: state.selenium,
+        browser: state.browser,
+        tearDown: tearDown.bind(null, state)
       })
-      state.browser.on('erorr', function (error) {
-        state.debugBrowser('ERROR: %s %s', error.body.value.class, error.body.value.message)
-      })
-
-      state.debugBrowser('starting')
-      state.browser
-        .init()
-
-        .then((session) => {
-          state.sessionId = session.sessionId
-
-          if (config.runner === 'selenium') {
-            // http://webdriver.io/api/protocol/timeouts.html
-            // setting these timeouts does not work with saucelabs, the browser
-            // just hangs, I could not find out why ~@gr2m Nov 13, 2016
-            return state.browser
-              .timeouts('script', config.timeout)
-              .timeouts('implicit', config.timeout)
-              .timeouts('page load', config.timeout)
-          }
-        })
-
-        .then(function () {
-          state.debugBrowser('started')
-          callback(null, {
-            selenium: state.selenium,
-            browser: state.browser,
-            tearDown: tearDown.bind(null, state)
-          })
-        })
-
-        .catch((error) => {
-          state.debugBrowser(`error: ${error}`)
-          tearDown(state, callback)
-        })
     })
   })
-}
-
-function getScriptName (script) {
-  var matches = script.match(/return \(function (\w+)/)
-  return matches ? matches[1] : '[function]'
 }
