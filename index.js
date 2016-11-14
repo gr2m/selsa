@@ -19,7 +19,7 @@ function selsa (options, callback) {
     debugBrowser: debug('selsa:browser')
   }
 
-  getConfig(state, options, (error, config) => {
+  getConfig(options, (error, config) => {
     if (error) {
       return callback(error)
     }
