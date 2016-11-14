@@ -6,7 +6,6 @@ const selsa = require('../../index')
 test('server', (t) => {
   selsa({}, (error, api) => {
     t.tearDown(() => {
-      console.log('\n\n\nTEARDOWN\n\n')
       if (!this.server) {
         return api.tearDown(t.passing())
       }
@@ -39,7 +38,7 @@ test('server', (t) => {
 
         // http://webdriver.io/api/protocol/execute.html
         .execute(function hello (name) {
-          return `Hello, ${name}!`
+          return 'Hello, ' + name + '!'
         }, 'foo')
           .then((response) => {
             t.equal(response.value, 'Hello, foo!')
