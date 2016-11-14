@@ -126,7 +126,7 @@ ENV variables, listed below the option name.
     <tr>
       <td>
         <strong>timeout</strong><br>
-        (<code>TIMEOUT</code>)<br><br>
+        (<code>CLIENT_TIMEOUT</code>)<br><br>
 
         <a href="http://webdriver.io/api/protocol/timeouts.html">webdriver timouts</a>
       </td>
@@ -140,6 +140,15 @@ ENV variables, listed below the option name.
         Url to selenium hub
       </td>
       <td><code>'http://localhost:4444/wd/hub/status'</code></td>
+    </tr>
+    <tr>
+      <td>
+        <strong>selenium.standalone.version</strong><br>
+        (<code>SELENIUM_VERSION</code>)<br><br>
+
+        Selenium version to install
+      </td>
+      <td>see <a href="https://github.com/vvo/selenium-standalone/blob/master/lib/default-config.js">selenium-standalone defaults</a></td>
     </tr>
     <tr>
       <td>
