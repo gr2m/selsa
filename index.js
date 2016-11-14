@@ -47,9 +47,6 @@ function selsa (options, callback) {
         return callback(error)
       }
 
-      console.log(`\nconfig.webdriver ==============================`)
-      console.log(config.webdriver)
-
       state.browser = webdriverio.remote(config.webdriver)
 
       state.browser.on('command', function (command) {
