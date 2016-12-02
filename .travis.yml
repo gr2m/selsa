@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 addons:
-  firefox: "48.0"
+  firefox: "47.0.2"
 cache:
   directories:
   - $HOME/.npm
@@ -25,5 +25,5 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 env:
   matrix:
-    - CLIENT=selenium:firefox
+    - CLIENT=selenium:firefox:47.0.2
     - CLIENT=saucelabs:chrome
