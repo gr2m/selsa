@@ -226,6 +226,12 @@ ENV variables, listed below the option name.
 When running your tests agains Sauce Labs, make sure to give enough timeouts.
 Connecting and spawning from Travis often time takes over 30s.
 
+### Unreliable builds
+
+No matter how much we try, Selenium tests and random timeouts and other errors
+seem to occur very often. If you tried everything else to make your tests 100%
+reliable on travis, try [travis-retry](https://docs.travis-ci.com/user/common-build-problems/#Timeouts-installing-dependencies)
+
 ## Credits
 
 The abstraction of Selenium vs Sauce Labs is partly inspired by [selenium-sauce](https://github.com/alexbrombal/selenium-sauce)
