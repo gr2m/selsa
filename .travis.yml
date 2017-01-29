@@ -25,5 +25,5 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 env:
   matrix:
-    - CLIENT=selenium:firefox:47.0.2
+    - CLIENT=selenium:firefox:47.0.2 SELENIUM_VERSION=2.53.1
     - CLIENT=saucelabs:chrome
