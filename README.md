@@ -58,9 +58,9 @@ test('Landing page', (t) => {
 
 ### Testing on Travis
 
-`selsa` plays nicely with [Travis](http://travis-ci.org/). If
-you want to test using selenium, make sure to only test in Firefox as it's the
-only supported browser, and add the following lines:
+`selsa` plays nicely with [Travis](http://travis-ci.org/). If you want to test
+using selenium, make sure to only test in Firefox as it's the only supported
+browser, and add the following lines:
 
 ```
 before_install:
@@ -68,13 +68,15 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 ```
 
-You can also install a more recent firefox version. I recommend v48, as 49 and
-later only works with the latest gecko driver and I couldn’t get it to work
-myself yet
+You can also install a more recent firefox version. I recommend v47.0.2, as I
+could not get 48 to work and 49 later only works with the latest gecko drive
+and Selenium 3, which requires Java 8, and that is not available on Travis
+by default. You will also need to set `SELENIUM_VERSION` to `2.53.1` on Travis
+unless you have Java 8 available.
 
 ```
 addons:
-  firefox: "48.0"
+  firefox: "47.0.2"
 ```
 
 I would also recommend to cache the saucelabs binaries for faster build
@@ -91,7 +93,7 @@ as many different browser configurations using the `env.matrix` setting, e.g.
 ```
 env:
   matrix:
-  - CLIENT=selenium:firefox
+  - CLIENT=selenium:firefox SELENIUM_VERSION=2.53.1
   - CLIENT=saucelabs:chrome
   - CLIENT="saucelabs:internet explorer:10:Windows 8"
   - CLIENT="saucelabs:iphone:8.4:OS X 10.11"
