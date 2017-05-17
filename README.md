@@ -44,9 +44,6 @@ test('Landing page', (t) => {
   selsa(selsaOptions, (error, api) => {
     api.browser
       .url('http://localhost:8000')
-  })
-    return this.client
-      .url('/')
       .getTitle()
         .then((title) => {
           t.equals(title, 'My demo page')
