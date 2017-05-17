@@ -42,6 +42,8 @@ const selsaOptions = {
 
 test('Landing page', (t) => {
   selsa(selsaOptions, (error, api) => {
+    t.tearDown(api.tearDown)
+
     api.browser
       .url('http://localhost:8000')
       .getTitle()
