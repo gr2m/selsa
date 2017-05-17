@@ -117,7 +117,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>client</strong><br>
         (<code>CLIENT</code>)<br><br>
-
         (saucelabs|selenium):browserName:browserVerion:platform,
         e.g. 'saucelabs:internet explorer:10:win10'
       </td>
@@ -127,7 +126,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>timeout</strong><br>
         (<code>CLIENT_TIMEOUT</code>)<br><br>
-
         <a href="http://webdriver.io/api/protocol/timeouts.html">webdriver timouts</a>
       </td>
       <td><code>180000</code></td>
@@ -136,7 +134,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>selenium.hub</strong><br>
         (<code>SELENIUM_HUB</code>)<br><br>
-
         Url to selenium hub
       </td>
       <td><code>'http://localhost:4444/wd/hub/status'</code></td>
@@ -145,7 +142,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>selenium.standalone.version</strong><br>
         (<code>SELENIUM_VERSION</code>)<br><br>
-
         Selenium version to install
       </td>
       <td>see <a href="https://github.com/vvo/selenium-standalone/blob/master/lib/default-config.js">selenium-standalone defaults</a></td>
@@ -154,7 +150,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.connect.username</strong><br>
         (<code>SAUCELABS_USERNAME</code>)<br><br>
-
         Saucelabs username for authentication
       </td>
       <td>e.g. <code>'pat'</code></td>
@@ -163,7 +158,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.connect.accessKey</strong><br>
         (<code>SAUCELABS_ACCESS_KEY</code>)<br><br>
-
         Saucelabs access key for authentication
       </td>
       <td>e.g. <code>'abcd5678-1234-1234-1234-abcd5678abcd'</code></td>
@@ -172,7 +166,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.connect.retries</strong><br>
         (<code>SAUCELABS_CONNECT_RETRIES</code>)<br><br>
-
         Amount of retries if case of connection error (excl. auth error)
       </td>
       <td><code>10</code></td>
@@ -181,7 +174,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.connect.retryTimeout</strong><br>
         (<code>SAUCELABS_CONNECT_RETRY_TIMEOUT</code>)<br><br>
-
         Timeout between connection retries in ms
       </td>
       <td>Random between <code>5000</code> and <code>60000</code></td>
@@ -190,7 +182,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.webdriver.desiredCapabilities.idle-timeout</strong><br>
         (<code>SAUCELABS_IDLE_TIMEOUT</code>)<br><br>
-
         <a href="https://docs.saucelabs.com/reference/test-configuration/#idle-test-timeout">SauceLabs Idle Test Timeout</a>
       </td>
       <td><code>90</code>, allowed maximum is <code>1000</code></td>
@@ -199,7 +190,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.webdriver.desiredCapabilities.max-duration</strong><br>
         (<code>SAUCELABS_MAX_DURATION</code>)<br><br>
-
         <a href="https://docs.saucelabs.com/reference/test-configuration/#maximum-test-duration">SauceLabs Maximum Test Duration</a>
       </td>
       <td><code>1800</code>, allowed maximum is <code>10800</code></td>
@@ -208,7 +198,6 @@ ENV variables, listed below the option name.
       <td>
         <strong>saucelabs.webdriver.desiredCapabilities.max-duration</strong><br>
         (<code>SAUCELABS_COMMAND_TIMEOUT</code>)<br><br>
-
         <a href="https://docs.saucelabs.com/reference/test-configuration/#command-timeout">SauceLabs Command Timeout</a>
       </td>
       <td><code>300</code>, allowed maximum is <code>600</code></td>
