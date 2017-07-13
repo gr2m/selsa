@@ -37,7 +37,7 @@
     "hapi": "^16.0.0",
     "hapi-auth-cookie": "^7.0.0",
     "joi": "^10.0.5",
-    "lolex": "^1.5.2",
+    "lolex": "^2.0.0",
     "nyc": "^11.0.2",
     "proxyquire": "^1.7.10",
     "semantic-release": "^6.3.1",
