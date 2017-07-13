@@ -23,7 +23,7 @@ test('ENV config', (group) => {
   })
 
   group.test('TRAVIS_JOB_NUMBER', (t) => {
-    var clock = lolex.install(45678, ['Date'])
+    var clock = lolex.install({now: 45678, toFake: ['Date']})
     simple.mock(process.env, 'TRAVIS_JOB_NUMBER', '123')
     const config = getEnvConfig()
     clock.uninstall()
@@ -36,7 +36,7 @@ test('ENV config', (group) => {
   })
 
   group.test('no TRAVIS_JOB_NUMBER', (t) => {
-    var clock = lolex.install(45678, ['Date'])
+    var clock = lolex.install({now: 45678, toFake: ['Date']})
     simple.mock(process.env, 'TRAVIS_JOB_NUMBER', '')
     const config = getEnvConfig()
     clock.uninstall()
