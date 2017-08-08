@@ -22,7 +22,7 @@
   "homepage": "https://github.com/gr2m/selsa#readme",
   "dependencies": {
     "async": "^2.1.2",
-    "debug": "^2.3.2",
+    "debug": "^3.0.0",
     "joi": "^10.0.4",
     "lodash": "^4.16.6",
     "request": "^2.78.0",
