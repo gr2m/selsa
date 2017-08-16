@@ -40,7 +40,7 @@
     "lolex": "^2.0.0",
     "nyc": "^11.0.2",
     "proxyquire": "^1.7.10",
-    "semantic-release": "^6.3.1",
+    "semantic-release": "^7.0.1",
     "simple-mock": "^0.8.0",
     "standard": "^10.0.0",
     "tap": "^10.1.0"
