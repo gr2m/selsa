@@ -9,9 +9,8 @@ cache:
 notifications:
   email: false
 node_js:
-  - '6'
-before_install:
-  - npm i -g npm@^3
+  - 6
+  - 8
 before_script:
   - npm prune
   # headless testing with firefox
