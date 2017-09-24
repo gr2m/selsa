@@ -23,7 +23,7 @@
   "dependencies": {
     "async": "^2.1.2",
     "debug": "^3.0.0",
-    "joi": "^11.0.3",
+    "joi": "^11.1.0",
     "lodash": "^4.16.6",
     "request": "^2.78.0",
     "sauce-connect-launcher": "^1.0.0",
