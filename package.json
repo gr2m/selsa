@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.15",
-    "hapi": "^16.0.0",
+    "hapi": "^16.6.1",
     "hapi-auth-cookie": "^7.0.0",
     "joi": "^10.0.5",
     "lolex": "^2.0.0",
