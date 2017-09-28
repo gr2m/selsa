@@ -33,7 +33,7 @@
     "webdriverio": "^4.4.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.15",
+    "coveralls": "^3.0.0",
     "hapi": "^16.0.0",
     "hapi-auth-cookie": "^7.0.0",
     "joi": "^10.0.5",
