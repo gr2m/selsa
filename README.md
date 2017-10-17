@@ -1,5 +1,7 @@
 # selsa
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/gr2m/selsa.svg)](https://greenkeeper.io/)
+
 > Selenium, Saucelabs, Webdriver and lots of despair
 
 [![Build Status](https://travis-ci.org/gr2m/selsa.svg?branch=master)](https://travis-ci.org/gr2m/selsa)
