@@ -1,3 +1,7 @@
+# ⚠️ This project is no longer maintained / looking for new maintainer.
+
+Ping me [@gr2m](https://twitter.com/gr2m) if you would like to take it over. 
+
 # selsa
 
 > Selenium, Saucelabs, Webdriver and lots of despair
